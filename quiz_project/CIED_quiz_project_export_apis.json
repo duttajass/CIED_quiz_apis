@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "aea9fdb6-63a2-4543-81f8-e3d726455bd8",
+		"name": "CIED_test_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add_new_quiz_set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quiz_name",
+							"value": "Quiz 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_quiz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_all_quiz_set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_quiz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_question_answers_for_a_quiz_set",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "What is the color of sky?",
+							"type": "text"
+						},
+						{
+							"key": "choice_1",
+							"value": "Green",
+							"type": "text"
+						},
+						{
+							"key": "choice_2",
+							"value": "Yellow",
+							"type": "text"
+						},
+						{
+							"key": "choice_3",
+							"value": "Blue",
+							"type": "text"
+						},
+						{
+							"key": "right_answer",
+							"value": "Blue",
+							"type": "text"
+						},
+						{
+							"key": "marks",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_questions_for_quiz/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_questions_for_quiz",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_questions_answers_for_a_quiz_set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_questions_for_quiz/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_questions_for_quiz",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_start_a_quiz_game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "Jui Dutta",
+							"type": "text"
+						},
+						{
+							"key": "quiz",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_play",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_all_users_list_with_score",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_name",
+							"value": "Jui Dutta",
+							"type": "text"
+						},
+						{
+							"key": "quiz",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_or_add_play",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_or_add_play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_play_details_by_play_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/get_play_details/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"get_play_details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit_quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quiz_questions\":[\n        {\"que_id\": 1, \"answer\": \"Yellow\"}, {\"que_id\": 2, \"answer\": \"Blue\"}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/quiz_api/submit_quiz/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"quiz_api",
+						"submit_quiz",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
